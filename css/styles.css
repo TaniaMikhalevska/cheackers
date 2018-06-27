@@ -1,0 +1,128 @@
+:root {
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+/* Main Styles */
+
+.checkers-board {
+    position: relative;
+    top: 35px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    width: 640px;
+    height: 640px;
+    border: 10px ridge #5b4b39;
+    outline: 25px outset #f3e0c4;
+
+}
+[class^="checkers-board-cell"] {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+}
+[class^="checkers-board-cell"]:nth-child(2n) {
+    background: url(../images/lightwood.jpg);
+}
+[class^="checkers-board-cell"]:nth-child(2n):hover {   opacity: 0.9;}
+
+[class^="checkers-board-cell"]:nth-child(2n+1) {
+    background: url(../images/darkwood.jpg);
+}
+[class^="checkers-board-cell"]:nth-child(2n+1):hover {   opacity: 0.95;}
+[class$="-cell2"],[class$="-cell15"],[class$="-cell18"],[class$="-cell31"],[class$="-cell34"],[class$="-cell47"],[class$="-cell50"],[class$="-cell63"] {
+    left: 80px;
+}
+[class$="-cell3"],[class$="-cell14"],[class$="-cell19"],[class$="-cell30"],[class$="-cell35"],[class$="-cell46"],[class$="-cell51"],[class$="-cell62"] {
+    left: 160px;
+}
+[class$="-cell4"],[class$="-cell13"],[class$="-cell20"],[class$="-cell29"],[class$="-cell36"],[class$="-cell45"],[class$="-cell52"],[class$="-cell61"] {
+    left: 240px;
+}
+[class$="-cell5"],[class$="-cell12"],[class$="-cell21"],[class$="-cell28"],[class$="-cell37"],[class$="-cell44"],[class$="-cell53"],[class$="-cell60"] {
+    left: 320px;
+}
+[class$="-cell6"],[class$="-cell11"],[class$="-cell22"],[class$="-cell27"],[class$="-cell38"],[class$="-cell43"],[class$="-cell54"],[class$="-cell59"] {
+    left: 400px;
+}
+[class$="-cell7"],[class$="-cell10"],[class$="-cell23"],[class$="-cell26"],[class$="-cell39"],[class$="-cell42"],[class$="-cell55"],[class$="-cell58"] {
+    left: 480px;
+}
+[class$="-cell8"],[class$="-cell9"],[class$="-cell24"],[class$="-cell25"],[class$="-cell40"],[class$="-cell41"],[class$="-cell56"],[class$="-cell57"] {
+    left: 560px;
+}
+
+
+[class$="-cell16"],[class$="-cell15"],[class$="-cell14"],[class$="-cell13"],[class$="-cell12"],[class$="-cell11"],[class$="-cell10"],[class$="-cell9"] {
+    top: 80px;
+}
+[class$="-cell17"],[class$="-cell18"],[class$="-cell19"],[class$="-cell20"],[class$="-cell21"],[class$="-cell22"],[class$="-cell23"],[class$="-cell24"] {
+    top: 160px;
+}
+[class$="-cell32"],[class$="-cell31"],[class$="-cell30"],[class$="-cell29"],[class$="-cell28"],[class$="-cell27"],[class$="-cell26"],[class$="-cell25"] {
+   top: 240px;
+}
+[class$="-cell33"],[class$="-cell34"],[class$="-cell35"],[class$="-cell36"],[class$="-cell37"],[class$="-cell38"],[class$="-cell39"],[class$="-cell40"] {
+    top: 320px;
+}
+[class$="-cell48"],[class$="-cell47"],[class$="-cell46"],[class$="-cell45"],[class$="-cell44"],[class$="-cell43"],[class$="-cell42"],[class$="-cell41"] {
+    top: 400px;
+}
+[class$="-cell49"],[class$="-cell50"],[class$="-cell51"],[class$="-cell52"],[class$="-cell53"],[class$="-cell54"],[class$="-cell55"],[class$="-cell56"] {
+    top: 480px;
+}
+[class$="-cell64"],[class$="-cell63"],[class$="-cell62"],[class$="-cell61"],[class$="-cell60"],[class$="-cell59"],[class$="-cell58"],[class$="-cell57"] {
+    top: 560px;
+}
+[class^="checkers-checker-"] {
+    width:60px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 10px 5px 10px rgba(0,0,0,0.5);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+.checkers-checker-black {
+    background: url(../images/black.png);
+}
+[class^="checkers-checker-"]:hover {
+    box-shadow: 10px 5px 15px rgba(0,0,0,0.7);
+    transform: scale(1.05);
+}
+.checkers-checker-white {
+    background: url(../images/white.png);
+    
+}
